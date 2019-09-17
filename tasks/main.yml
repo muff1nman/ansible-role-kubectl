@@ -1,0 +1,8 @@
+---
+- name: Setup kubernetes.repo
+  copy:
+    src: kubernetes.repo
+    dest: /etc/yum.repos.d/kubernetes.repo
+- name: Install kubectl
+  package:
+    name: kubectl
